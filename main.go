@@ -13,7 +13,7 @@ import (
 	"time"
 )
 
-var bot = dingtalk.InitDingTalkWithSecret("86739bacb778f46fd978a70aa0c98a0de42ead542da9ce2552a322a233dc0c0f", "SEC039a95542d2cae2e174b4aca7654a6d2213fa36b0ca2b7c1fcf68f34817b152d")
+var bot = dingtalk.InitDingTalkWithSecret("a176c5765dad438805689952492bd524d91f46b49662be6db5d62452239194c7", "SECdb3ea84412cbd4981b2b7e0d448cbb7ccad15521abe23e7cb453362f85c23ad3")
 
 func main() {
 	start()
@@ -91,7 +91,7 @@ func sendMessage() {
 	message += "  \n> 您的服务器已运行-" + fmt.Sprintf("%d", info.Days) + "天" + fmt.Sprintf("%d", info.Hours) + "小时" + fmt.Sprintf("%d", info.Minutes) + "分钟" + fmt.Sprintf("%d", info.Seconds) + "秒"
 	message += "  \n- 系统运行内存使用率为：" + fmt.Sprintf("%.2f", info.MemUsedPercent) + "%"
 	message += "  \n- 系统运行CPU使用率为：" + fmt.Sprintf("%.2f", info.CpuUsedPercent) + "%"
-	message += "  \n- 系统物理磁盘磁盘使用率为：" + fmt.Sprintf("%.2f", d.UsedPercent) + "%"
+	message += "  \n- 系统物理磁盘使用率为：" + fmt.Sprintf("%.2f", d.UsedPercent) + "%"
 	message += "  \n- 系统运行内存已用量为：" + fmt.Sprintf("%d", info.MemUsed) + "MB/" + fmt.Sprintf("%d", info.MemAll) + "MB"
 	message += "  \n- 系统运行内存空闲量为：" + fmt.Sprintf("%d", info.MemFree) + "MB"
 	message += "  \n- 系统运行CPU核心数为：" + fmt.Sprintf("%d", info.CpuCores) + "核"
@@ -109,7 +109,7 @@ func checkCpuAndMem() {
 	if avg.Load1 > loadavg_max || avg.Load5 > loadavg_max || avg.Load15 > loadavg_max {
 		bot.SendMarkDownMessage("服务器告警", "⚠️<font color=\"#d30c0c\">【警告】</font>您的云服务器当前负载过高，当前负载为<font color=\"#d30c0c\">"+fmt.Sprintf("%.2f", avg.Load1)+"</font>，请及时检查系统是否存在问题。")
 	}
-	if info.MemUsedPercent > 90.0 {
+	if info.MemUsedPercent > 99.5 {
 		bot.SendMarkDownMessage("服务器告警", "⚠️<font color=\"#d30c0c\">【警告】</font>您的云服务器当前内存使用率为<font color=\"#d30c0c\">"+fmt.Sprintf("%.2f", info.MemUsedPercent)+"%</font>，请及时检查系统是否存在问题。")
 	}
 	if info.CpuUsedPercent > 70.0 {
