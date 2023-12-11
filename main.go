@@ -21,7 +21,7 @@ func main() {
 	//每天早上报告服务器基本信息
 	gocron.Every(1).Day().At("09:30").Do(sendMessage)
 	//每30秒检查服务器cpu和内存是否飙高
-	gocron.Every(1).Second().Do(checkCpuAndMem)
+	gocron.Every(30).Second().Do(checkCpuAndMem)
 	<-gocron.Start()
 }
 
