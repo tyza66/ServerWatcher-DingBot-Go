@@ -18,6 +18,6 @@
 4、编译对应平台程序  
 
 #### 三、其他
-- 可制作`/etc/systemd/system`下的service文件，实现开机自启动和守护进程
+- Linux下可制作`/etc/systemd/system`下的service文件，实现开机自启动和守护进程
 
 By:tyza66
