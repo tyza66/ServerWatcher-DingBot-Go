@@ -1,7 +1,7 @@
 # ServerWatcher-DingBot-Go
 ### 钉钉机器人服务器监控-Go版本
 #### 一、说明
-- 支持windows、支持linux各种架构
+- 支持Windows、支持Linux各种架构
 - 支持定时推送服务器状态、内存告警、Cpu飙高告警、负载率告警
 - 参考https://github.com/tyza66/ServerWatcher-DingBot
 <details><summary>推送效果</summary>
