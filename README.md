@@ -20,4 +20,7 @@
 #### 三、其他
 - Linux下可制作`/etc/systemd/system`下的service文件，实现开机自启动和守护进程
 
+#### 四、新维护版本
+- https://github.com/MutantCat-Working-Group/Echoes
+
 By:tyza66
